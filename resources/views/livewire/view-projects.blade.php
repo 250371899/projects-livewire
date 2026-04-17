@@ -65,7 +65,7 @@
                     </flux:table.row>
                 @empty
                 <flux:table.row>
-                    <flux:table.cell colspan="5" class="text-center py-12 text-gray-500 italic">
+                    <flux:table.cell colspan="7" class="text-center py-12 text-gray-500 italic">
                         <flux:icon icon="exclamation-triangle" variant="outline" class="mx-auto mb-2 opacity-20" />
                         No projects available
                     </flux:table.cell>
