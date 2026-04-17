@@ -37,7 +37,7 @@ class ViewProjects extends Component
     protected $rules = [
         'selectedItem.title' => ['required', 'string', 'min:10', 'max:30'],
         'selectedItem.description' => ['required', 'string', 'min:50', 'max:255'],
-        'selectedItem.phase' => ['required', 'in:1,2,3,4,5'],
+        'selectedItem.phase ' => 'required|in:design,development,testing,deployment,complete',
         'selectedItem.startDate' => ['required', 'date', 'after:yesterday'],
         'selectedItem.endDate' => ['required', 'date', 'after:startDate'],
         ];
