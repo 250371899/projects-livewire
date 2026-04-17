@@ -33,11 +33,11 @@
             <div>
             <flux:select wire:model="phase" placeholder="Select a phase">
                 <flux:select.option value="0"></flux:select.option>  // added 0 so that if not selected fails
-                <flux:select.option value="1">Design</flux:select.option>
-                <flux:select.option value="2">Development</flux:select.option>
-                <flux:select.option value="3">Testing</flux:select.option>
-                <flux:select.option value="4">Deployment</flux:select.option>
-                <flux:select.option value="5">Complete</flux:select.option>
+                <flux:select.option value="design">Design</flux:select.option>
+                <flux:select.option value="development">Development</flux:select.option>
+                <flux:select.option value="testing">Testing</flux:select.option>
+                <flux:select.option value="deployment">Deployment</flux:select.option>
+                <flux:select.option value="complete">Complete</flux:select.option>
             </flux:select>  
             {{-- handling validation error message --}}
             @error('phase')

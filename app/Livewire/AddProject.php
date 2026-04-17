@@ -15,7 +15,7 @@ class AddProject extends Component
     protected $rules = [
         'title' => ['required', 'string', 'min:10', 'max:30'],
         'description' => ['required', 'string', 'min:50', 'max:255'],
-        'phase' => ['required', 'in:0,1,2,3,4,5'],
+        'phase' => ['required', 'in: 1,2,3,4,5'],
         'startDate' => ['required', 'date', 'after:yesterday'],
         'endDate' => ['required', 'date', 'after:startDate'],
         ];
