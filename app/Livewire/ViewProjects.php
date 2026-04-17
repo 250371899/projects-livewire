@@ -37,7 +37,7 @@ class ViewProjects extends Component
     protected $rules = [
         'selectedItem.title' => ['required', 'string', 'min:10', 'max:30'],
         'selectedItem.description' => ['required', 'string', 'min:50', 'max:255'],
-        'selectedItem.phase ' => 'required|in:design,development,testing,deployment,complete',
+        'selectedItem.phase' => 'required|in:design,development,testing,deployment,complete',
         'selectedItem.startDate' => ['required', 'date', 'after:yesterday'],
         'selectedItem.endDate' => ['required', 'date', 'after:startDate'],
         ];
@@ -121,12 +121,14 @@ class ViewProjects extends Component
      * This method updates the project selected
      */
     public function updateProject($id){
+        
         // validate the user input
         $this->validate();
         // call for the update
         $controller = new ProjectsController();
         try{
             $success = $controller->updateProject($this->selectedItem);
+           
         }catch(\Exception $e){
             $this->dispatch('modal-close', name: "edit-modal");
             $this->dispatch("user-error", message: $e->getMessage());
