@@ -17,7 +17,7 @@
         <div>
             <flux:field class="flex flex-col">
             <flux:label>Description</flux:label>
-            <flux:description size="sm">The us what this project is about</flux:description>
+            <flux:description size="sm">Short description of the project</flux:description>
             <flux:textarea class="resize rounded-md" wire:model='description' />
             {{-- handling validation error message --}}
             @error('description')
