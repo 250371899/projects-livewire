@@ -10,32 +10,32 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-        
+
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         @fluxAppearance
     </head>
-    <body class="min-h-screen bg-white dark:bg-zinc-800 antialiased">
+    <body class="min-h-screen bg-white antialiased ">
 
-     <header class="sticky top-0 z-50 w-full bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-700">
-    
+    <header class="sticky top-0 z-50 w-full bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-700">
         <livewire:layout.navigation />
-      
+
     </header>
     {{-- Sidebar --}}
-    <div class="flex min-h-screen">
+    <flux:sidebar.collapse class="lg:hidden" />
+ 
+    <div class="flex w-full min-h-screen ">
+        
     <flux:sidebar sticky collapsible="mobile" class="bg-zinc-50 dark:bg-zinc-900 border-r border-zinc-200 dark:border-zinc-700">
-        <flux:sidebar.header>
+        <flux:sidebar.header class="mt-8">
   
-
-            <flux:sidebar.collapse class="lg:hidden" />
         </flux:sidebar.header>
 
         
 
         <flux:sidebar.nav>
             
-            <flux:sidebar.item icon="pencil-square" href="/new-project" :current="request()->is('new-project')" wire:navigat>Create a new project</flux:sidebar.item>
+            <flux:sidebar.item  icon="pencil-square" href="/new-project" :current="request()->is('new-project')" wire:navigat>Create a new project</flux:sidebar.item>
             <flux:sidebar.item icon="book-open" href="/view-projects" :current="request()->is('view-projects')">View your projects</flux:sidebar.item>
             <flux:sidebar.item icon="globe-alt" href="/search-project" :current="request()->is('search-project')">Search for a project</flux:sidebar.item>
 
@@ -84,7 +84,10 @@
                         </div>
                         <br>
                         {{-- where pages components gets loaded into --}}
-                    {{ $slot }}
+                        <div class=" bg-white dark:bg-gray-800">
+                            {{ $slot }}
+                        </div>
+                  
                 </div>
             </flux:main>
         </div>

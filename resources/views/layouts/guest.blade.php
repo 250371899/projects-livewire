@@ -18,7 +18,7 @@
             @if (Route::has('login'))
                 <livewire:welcome.navigation />
             @endif
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-white-100 dark:bg-gray-900">
+        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-white-100">
             <div>
                 <a href="/" wire:navigate>
                     <x-application-logo class="w-20 h-20 fill-current text-white-500" />
@@ -28,7 +28,7 @@
             @if (request()->is('login') || request()->is('register'))
                 <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
             @else
-                <div class="w-full mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
+                <div class="w-full mt-6 px-6 py-4 shadow-md overflow-hidden sm:rounded-lg">
             @endif
 
                 {{ $slot }}
@@ -40,7 +40,7 @@
             © 2026 Version 1.0
         </div>
     </footer>
-            @livewireScripts 
+        @livewireScripts 
         @fluxScripts
     </body>
 

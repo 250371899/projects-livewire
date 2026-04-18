@@ -2,7 +2,7 @@
 <div>
 
     {{-- This is the filter div --}}
-    <div class="flex flex-row-reverse">
+    <div class="flex flex-row-reverse ">
         <flux:dropdown>
             <flux:button icon:trailing="funnel" size="xs"></flux:button>
 
@@ -24,7 +24,7 @@
         </flux:dropdown>
     </div>
     <br>
-    <div class="flex flex-col gap-4 w-full ">
+    <div class="flex flex-col gap-4 w-full  bg-white dark:bg-gray-800">
 
         {{-- table for displaying the list of current user's projects --}}
         <flux:table :paginate="$projects">

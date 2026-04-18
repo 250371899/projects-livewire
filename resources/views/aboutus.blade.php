@@ -1,11 +1,11 @@
 <x-guest-layout>
 
-    <h2 class="text-center">About us</h2>
+    <h2 class="text-center ">About us</h2>
     <br>
     <p class="text-xs text-justify tracking-wide gap-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
     <br>
 
-<div class="grid grid-cols-2 gap-4">
+<div class="grid grid-cols-2 gap-4  bg-white dark:bg-gray-800">
     <div class="flex-1">
     <a href="https://getbootstrap.com">
         <flux:card size="sm" class="hover:bg-zinc-50 dark:hover:bg-zinc-700">
