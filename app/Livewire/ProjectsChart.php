@@ -51,12 +51,14 @@ class ProjectsChart extends Component
 
 
         $this->pieChartModel = (new PieChartModel())
-            ->setTitle('Your projects')
+            
             ->addSlice('Design', $this->phases['design'], '#f6ad55')
-            ->addSlice('Deployment', $this->phases['deployment'], '#fc5681')
-            ->addSlice('Developing', $this->phases['development'], '#fc6511')
+            ->addSlice('Deployment', $this->phases['deployment'], '#00ff00')
+            ->addSlice('Developing', $this->phases['development'], '#b266ff')
             ->addSlice('Testing', $this->phases['testing'], '#fd5852')
             ->setAnimated(true)
+            
+            
             ->withOnSliceClickEvent('onSliceClick'); 
     }
     public function render()
