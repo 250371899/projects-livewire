@@ -12,7 +12,7 @@ class TotalProjectsCounter extends Component
     private $phases = [
         "design"=> "",
         "deployment"=> "",
-        "developing" => "",
+        "development" => "",
         "testing" => "",
     ];
     /**
@@ -37,9 +37,10 @@ class TotalProjectsCounter extends Component
       
 
     $this->total += $this->phases['testing'];
-    $this->total += $this->phases['developing'];
+    $this->total += $this->phases['development'];
     $this->total += $this->phases['deployment'];
     $this->total += $this->phases['design'];
+
     }
     public function render()
     {

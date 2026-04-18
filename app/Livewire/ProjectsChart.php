@@ -33,9 +33,9 @@ class ProjectsChart extends Component
             $this->dispatch('user-error', message: $e->getMessage());
             }
             $this->phases[$phaseKey] = $success;
-           
+          
         }
-      
+    
  
     }
     public function mount(){
@@ -51,13 +51,12 @@ class ProjectsChart extends Component
 
 
         $this->pieChartModel = (new PieChartModel())
-            
+      
             ->addSlice('Design', $this->phases['design'], '#f6ad55')
-            ->addSlice('Deployment', $this->phases['deployment'], '#00ff00')
-            ->addSlice('Developing', $this->phases['development'], '#b266ff')
+            ->addSlice('Deployment', $this->phases['deployment'], '#fc5681')
+            ->addSlice('Developing', $this->phases['development'], '#fc6511')
             ->addSlice('Testing', $this->phases['testing'], '#fd5852')
             ->setAnimated(true)
-            
             
             ->withOnSliceClickEvent('onSliceClick'); 
     }

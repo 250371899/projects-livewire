@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 // Route for homepage
-Route::view('/index', 'welcome')
+Route::view('/', 'welcome')
     ->name('home');
 // Route for personal dashboard
 Route::view('dashboard', 'dashboard')
