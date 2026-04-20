@@ -43,6 +43,7 @@ class AddProject extends Component
             $this->dispatch('user-error', message: $success->getMessage());
         }else{
         $this->dispatch('user-message', message: "Your project has been saved successfully");
+        $this->resetForm(); // clear form inputs 
             return true;
         }
         
