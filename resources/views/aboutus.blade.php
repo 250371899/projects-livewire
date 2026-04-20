@@ -31,7 +31,7 @@
         <div >
         <a href="https://mariadb.org//">
         <flux:card  class="hover:bg-zinc-50 dark:hover:bg-zinc-700">
-            <flux:heading class="flex items-center gap-2">Apache <flux:icon name="arrow-up-right" class="ml-auto text-zinc-400" variant="micro" /></flux:heading>
+            <flux:heading class="flex items-center gap-2">MariaDB <flux:icon name="arrow-up-right" class="ml-auto text-zinc-400" variant="micro" /></flux:heading>
             <flux:text class="mt-2">MariaDB Server is one of the most popular open source relational databases. It’s made by the original developers of MySQL and guaranteed to stay open source. It is part of most cloud offerings and the default in most Linux distributions.</flux:text>
             <br>
             <flux:text class="text-xs">Tap to learn more</flux:text>
