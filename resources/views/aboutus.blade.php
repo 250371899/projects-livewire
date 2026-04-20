@@ -2,7 +2,7 @@
 
     <h2 class="text-center ">About us</h2>
     <br>
-    <p class="text-xs text-justify tracking-wide gap-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <p class="text-xs text-center tracking-wide gap-4">This project uses a variety of resources to run a database for managing the user sign-up and log-in and storing database project information.</p>
     <br>
 
     <h2>Resources</h2>
@@ -19,10 +19,20 @@
     </a>
     </div>
     <div >
-        <a href="https://apachefriends.org">
+        <a href="https://httpd.apache.org/">
         <flux:card  class="hover:bg-zinc-50 dark:hover:bg-zinc-700">
-            <flux:heading class="flex items-center gap-2">XAMPP <flux:icon name="arrow-up-right" class="ml-auto text-zinc-400" variant="micro" /></flux:heading>
-            <flux:text class="mt-2">Efficient way for learning and managing an offline SQL database.</flux:text>
+            <flux:heading class="flex items-center gap-2">Apache <flux:icon name="arrow-up-right" class="ml-auto text-zinc-400" variant="micro" /></flux:heading>
+            <flux:text class="mt-2">The Number One HTTP Server On The Internet</flux:text>
+            <br>
+            <flux:text class="text-xs">Tap to learn more</flux:text>
+        </flux:card>
+        </a>
+    </div>
+        <div >
+        <a href="https://mariadb.org//">
+        <flux:card  class="hover:bg-zinc-50 dark:hover:bg-zinc-700">
+            <flux:heading class="flex items-center gap-2">Apache <flux:icon name="arrow-up-right" class="ml-auto text-zinc-400" variant="micro" /></flux:heading>
+            <flux:text class="mt-2">MariaDB Server is one of the most popular open source relational databases. It’s made by the original developers of MySQL and guaranteed to stay open source. It is part of most cloud offerings and the default in most Linux distributions.</flux:text>
             <br>
             <flux:text class="text-xs">Tap to learn more</flux:text>
         </flux:card>

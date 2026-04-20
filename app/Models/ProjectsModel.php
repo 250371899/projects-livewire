@@ -25,8 +25,8 @@ class ProjectsModel extends Model
      * @return bool|\Exception
      */
       public function saveProject($title,$description,$phase,$startDate,$endDate){
-        // create new object model
-        $model = new ProjectsModel();
+        
+        
         try{
             $success = DB::table($this->table)->insert([
                 "title"=>$title,

@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 // Route for homepage
 Route::view('/', 'welcome')
-    ->name('home');
+->middleware('guest')
+    ->name('welcome');
 // Route for personal dashboard
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
@@ -41,4 +42,14 @@ Route::view('aboutus', 'aboutus')
 // Route for repository
 Route::view('repository', 'repository')
     ->name('repository');
+// Logout
+use Illuminate\Http\Request;
+Route::post('/logout', function (Request $request) {
+Auth::logout();
+
+$request->session()->invalidate();
+$request->session()->regenerateToken();
+
+return redirect('/');
+})->name('logout');
 require __DIR__.'/auth.php';
