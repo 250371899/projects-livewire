@@ -15,9 +15,9 @@ return new class extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->bigIncrements("id");
 
-            $table->string('title');
+            $table->string('title')->index();
             $table->string('description');
-            $table->date("start_date");
+            $table->date("start_date")->index();
             $table->date('end_date'); 
             $table->enum('phase', ['design','development','testing', 'deployment', 'complete'])->default('design');
             $table->timestamps();

@@ -26,7 +26,7 @@ class ProjectsModelFactory extends Factory
             'start_date' => $this->faker->dateTimeBetween('now', '+1 month')->format('Y-m-d'),
             'end_date'   => $this->faker->dateTimeBetween('+1 month', '+2 months')->format('Y-m-d'),
             'phase'       => $this->faker->randomElement(['design', 'development', 'testing', 'deployment', 'complete']),
-            'uid'         => 21,
+            'uid'         => 1,
             'created_at'  => now(),
         ];
     }
