@@ -1,8 +1,9 @@
 <?php
-
+use App\Http\Controllers\ProjectsController;
 use App\Livewire\Actions\Logout;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Volt\Component;
+
 
 new class extends Component
 {
@@ -18,9 +19,14 @@ new class extends Component
           
         ]);
 
+        // delete all current user projects then delete the user 
+
+        $controller = new ProjectsController;
+        $controller->deleteAll();
         tap(Auth::user(), $logout(...))->delete();
 
-        $this->redirect('/', navigate: true);
+
+        $this->redirect('/');
     }
 }; ?>
 

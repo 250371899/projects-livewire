@@ -87,7 +87,22 @@ class ProjectsController extends Controller
             return $e;
         }
         return $success;
-    }   
+    } 
+    /**
+     * This method deletes all project of current user logged in 
+     * @return $success The response from the DB
+     * @return $e The error from the DB
+     */
+    public function deleteAll(){
+        $model = new ProjectsModel();
+        try{
+            $success = $model->deleteAll();
+        }catch(\Exception $e){
+            return $e;
+        }
+        return $success;
+    } 
+    
     /**
      * This method search the paramater in the database
      * @param $search The search parameter

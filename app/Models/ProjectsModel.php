@@ -138,6 +138,21 @@ class ProjectsModel extends Model
         }
     }
 /**
+ * This method deletes all project of the current user 
+ * @param null
+ * @return DB::table  The table instance
+ * @return $e The error exception
+ */
+    public function deleteAll(){
+        try{
+            return DB::table($this->table)
+            ->where('uid', auth()->id()) // only projects that belongs to the logged in user
+            ->delete();
+        }catch(\Exception $e){
+            return $e;
+        }
+    }
+/**
  * This method search the paramater in the database
  * @param $search The search parameter
  * @return DB:table The query result
